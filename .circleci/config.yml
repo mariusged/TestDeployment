@@ -19,7 +19,7 @@
 
           - run:
               name: Push Docker image
-              command: docker Push
+              command: docker push
 
     workflows:
       version: 2
