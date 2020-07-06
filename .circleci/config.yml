@@ -5,7 +5,6 @@
           IMAGE_NAME: finstreet/testdeployment
           USERNAME: $DOCKER_USERNAME
           PASSWORD: $DOCKER_PASSWORD
-          context: TestDeployment
         docker:
           - image: docker:17.05.0-ce-git
         steps:
@@ -25,6 +24,7 @@
       build-master:
         jobs:
           - build:
+              context: TestDeployment
               filters:
                 branches:
                   only: master
