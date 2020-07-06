@@ -3,8 +3,6 @@
       build:
         environment:
           IMAGE_NAME: finstreet/testdeployment
-          USERNAME: $DOCKER_USERNAME
-          PASSWORD: $DOCKER_PASSWORD
         docker:
           - image: docker:17.05.0-ce-git
         steps:
@@ -17,7 +15,7 @@
 
           - run:
               name: Login Docker
-              command: docker login -u $DOCKER_USERNAME -p $DOCKER_Password
+              command: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
     workflows:
       version: 2
