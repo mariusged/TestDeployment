@@ -17,7 +17,7 @@
 
           - run:
               name: Login Docker
-              command: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+              command: docker login -u $DOCKER_USERNAME -p $DOCKER_Password
 
     workflows:
       version: 2
